@@ -468,7 +468,7 @@ void asc_child_close(asc_child_t *child)
             {
                 const int signum = WTERMSIG(status);
                 asc_log_debug(MSG("caught signal %d (%s)")
-                              , signum, strsignal[signum]);
+                              , signum, strsignal(signum));
 
                 status = 128 + signum;
             }
