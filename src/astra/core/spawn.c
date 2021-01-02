@@ -149,8 +149,8 @@ static
 void perror_s(const char *s)
 {
     const char *msg = "Unknown error";
-    if (errno < sys_nerr && sys_errlist[errno] != NULL)
-        msg = sys_errlist[errno];
+    /*if (errno < sys_nerr && sys_errlist[errno] != NULL)
+        msg = sys_errlist[errno];*/
 
     size_t slen;
     ssize_t ret;
